@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Button } from './ui/Button';
-import { Layers, Lightbulb, BarChart, Handshake } from 'lucide-react';
+import { Layers, Lightbulb, BarChart, Briefcase } from 'lucide-react';
 
 const steps = [
   {
@@ -22,7 +21,7 @@ const steps = [
   {
     title: "Intelligent Matching",
     description: "Schools find teachers who fit — not just apply.",
-    icon: Handshake
+    icon: Briefcase
   }
 ];
 
