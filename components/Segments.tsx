@@ -2,7 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from './ui/Button';
 
-export const TeacherSegment: React.FC = () => {
+interface SegmentProps {
+  onOpenForm: () => void;
+}
+
+export const TeacherSegment: React.FC<SegmentProps> = ({ onOpenForm }) => {
   return (
     <section id="teachers" className="py-24 bg-white relative overflow-hidden">
       {/* Subtle Lime/Teal gradient blob from "Your teaching degree" post */}
@@ -26,7 +30,14 @@ export const TeacherSegment: React.FC = () => {
             <p className="text-lg text-slate-600 mb-8 leading-relaxed">
               We help you build confidence, learn modern skills, and follow a mapped path to global opportunities — step by step.
             </p>
-            <Button variant="outline" className="border-teal-200 text-teal-700 hover:bg-teal-50" icon>Start My Journey</Button>
+            <Button 
+              variant="outline" 
+              className="border-teal-200 text-teal-700 hover:bg-teal-50" 
+              icon
+              onClick={onOpenForm}
+            >
+              Start My Journey
+            </Button>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -38,8 +49,8 @@ export const TeacherSegment: React.FC = () => {
              {/* Styled like the cut-out posts but with container */}
              <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl relative z-10">
                <img 
-                 src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?q=80&w=800&auto=format&fit=crop" 
-                 alt="Teacher presenting on a whiteboard" 
+                 src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" 
+                 alt="Professional teacher in business attire looking confident" 
                  className="w-full h-full object-cover"
                />
                <div className="absolute inset-0 bg-gradient-to-t from-teal-900/40 to-transparent"></div>
@@ -54,7 +65,7 @@ export const TeacherSegment: React.FC = () => {
   );
 };
 
-export const SchoolSegment: React.FC = () => {
+export const SchoolSegment: React.FC<SegmentProps> = ({ onOpenForm }) => {
   return (
     <section id="schools" className="py-24 bg-white relative overflow-hidden">
        {/* Subtle Sky/Blue gradient blob from "Prepare for what's next" post */}
@@ -71,8 +82,8 @@ export const SchoolSegment: React.FC = () => {
           >
             <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl relative z-10">
                <img 
-                 src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=800&auto=format&fit=crop" 
-                 alt="Students engaging in a classroom discussion" 
+                 src="https://images.unsplash.com/photo-1507537297725-24a1c434c67b?q=80&w=800&auto=format&fit=crop" 
+                 alt="Professional male teacher in a suit presenting" 
                  className="w-full h-full object-cover"
                />
                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent"></div>
@@ -99,7 +110,7 @@ export const SchoolSegment: React.FC = () => {
             <p className="text-lg text-slate-600 mb-8 leading-relaxed">
               We prepare and assess educators through a structured readiness system — giving you candidates who are confident and trained.
             </p>
-            <Button variant="secondary" icon>Partner With Teacheristic</Button>
+            <Button variant="secondary" icon onClick={onOpenForm}>Partner With Teacheristic</Button>
           </motion.div>
         </div>
       </div>

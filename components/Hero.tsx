@@ -3,7 +3,12 @@ import { motion } from 'framer-motion';
 import { Button } from './ui/Button';
 import { Globe, ShieldCheck, TrendingUp } from 'lucide-react';
 
-export const Hero: React.FC = () => {
+interface HeroProps {
+  onOpenTeacherForm?: () => void;
+  onOpenSchoolForm?: () => void;
+}
+
+export const Hero: React.FC<HeroProps> = ({ onOpenTeacherForm, onOpenSchoolForm }) => {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
       {/* Dynamic Gradient Background matching the Instagram Teal/Cyan/Lime vibes */}
@@ -59,8 +64,8 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col sm:flex-row justify-center gap-4 mb-12"
           >
-            <Button variant="primary" icon>I’m a Teacher</Button>
-            <Button variant="secondary" icon>I’m a School</Button>
+            <Button variant="primary" icon onClick={onOpenTeacherForm}>I’m a Teacher</Button>
+            <Button variant="secondary" icon onClick={onOpenSchoolForm}>I’m a School</Button>
           </motion.div>
 
           <motion.div
