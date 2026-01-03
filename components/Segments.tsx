@@ -38,8 +38,8 @@ export const TeacherSegment: React.FC = () => {
              {/* Styled like the cut-out posts but with container */}
              <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl relative z-10">
                <img 
-                 src="https://picsum.photos/seed/teacher123/800/600" 
-                 alt="Teacher in classroom" 
+                 src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?q=80&w=800&auto=format&fit=crop" 
+                 alt="Teacher presenting on a whiteboard" 
                  className="w-full h-full object-cover"
                />
                <div className="absolute inset-0 bg-gradient-to-t from-teal-900/40 to-transparent"></div>
@@ -71,8 +71,8 @@ export const SchoolSegment: React.FC = () => {
           >
             <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl relative z-10">
                <img 
-                 src="https://picsum.photos/seed/schoolarch/800/600" 
-                 alt="Modern school architecture" 
+                 src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=800&auto=format&fit=crop" 
+                 alt="Students engaging in a classroom discussion" 
                  className="w-full h-full object-cover"
                />
                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent"></div>
